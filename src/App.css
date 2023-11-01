@@ -1,3 +1,132 @@
+* {
+  box-sizing: border-box;
+  --containerWidth: 500px;
+  --commonFontSize: 1.5rem;
+  /* border: 1px solid lime; */
+}
+
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+}
+
+.centerContainer {
+  /* yatayda container'ı hizlamak için */
+  margin: 0 auto;
+  max-width: var(--containerWidth);
+}
+.content {
+  /* ekrandaki boşluğu doldurması için
+   flex child olduğundan flex-grow yazabiliyorum */
+  flex-grow: 1;
+
+  /* // flex parent olduğunan */
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header {
+  border-bottom: 0.5rem solid black;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem calc(var(--containerWidth) / 5);
+}
+
+.header-title {
+  margin-top: 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu button {
+  padding: var(--commonFontSize) calc(var(--commonFontSize) / 2);
+  font-size: var(--commonFontSize);
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.inputGroup label {
+  font-size: var(--commonFontSize);
+}
+
+.inputGroup input {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  padding: 2rem;
+  font-size: var(--commonFontSize);
+}
+.form {
+  width: var(--containerWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 2rem;
+  font-size: var(--commonFontSize);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.form .error {
+  background-color: tomato;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: white;
+  font-size: var(--commonFontSize);
+}
+
+.list {
+  font-size: var(--commonFontSize);
+}
+
+li {
+  list-style-type: none;
 }
